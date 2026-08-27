@@ -23,7 +23,7 @@
 <body>
 
 <h1>Datenschutzerklärung</h1>
-<p class="meta">Android-App „AllesAmPlatz“ · Stand: 15. August 2026</p>
+<p class="meta">Android-App „AllesAmPlatz“ · Stand: 27. August 2026</p>
 
 <h2>1. Verantwortlicher</h2>
 <p>
@@ -41,8 +41,9 @@
 
 <h2>2. Kurzfassung</h2>
 <p>
-  AllesAmPlatz ist eine reine Offline-Anwendung. Es gibt keinen Server des Anbieters, kein
-  Benutzerkonto, keine Registrierung, keine Werbung und keine Analyse- oder Tracking-Werkzeuge.
+  AllesAmPlatz arbeitet ohne Server des Anbieters, ohne Benutzerkonto, ohne Registrierung,
+  ohne Werbung und ohne Analyse- oder Tracking-Werkzeuge. Auch die automatische
+  Bilderkennung läuft ausschließlich auf Ihrem Gerät (siehe Punkt 5).
   Sämtliche von Ihnen erfassten Inhalte – Orte, Kisten, Gegenstände, Notizen, Schlagworte und
   Fotos – werden ausschließlich lokal im privaten Speicherbereich der App auf Ihrem Gerät
   abgelegt. Der Anbieter hat zu keinem Zeitpunkt Zugriff darauf und erhebt keine
@@ -80,22 +81,26 @@
   Die Kameravorschau wird nicht aufgezeichnet und nicht übertragen.
 </p>
 <p>
-  <strong>Internet</strong> – wird für den eigentlichen Betrieb der App nicht benötigt. Die
-  Berechtigung besteht ausschließlich für die unter Punkt 5 genannten, von Ihnen ausgelösten
-  Modell-Downloads. Es findet keine Kommunikation im Hintergrund statt.
+  <strong>Internet</strong> – für das Führen Ihres Inventars nicht erforderlich. Die
+  Berechtigung nutzen die Google Play-Dienste, um die unter Punkt 5 genannten Erkennungs- und
+  Sprachmodule nachzuladen. Es findet keine Kommunikation im Hintergrund statt; Fotos und
+  Inventardaten werden dabei nicht übertragen.
 </p>
 
-<h2>5. Keine Bilderkennung, keine Netzwerkverbindungen</h2>
+<h2>5. Bilderkennung auf dem Gerät</h2>
 <p>
-  Diese Version der App enthält <strong>keine automatische Bilderkennung</strong>. Ihre Fotos
-  werden weder analysiert noch an einen Server übertragen – weder an den Anbieter noch an
-  Dritte. Namen und Schlagworte vergeben Sie selbst.
+  Nach dem Aufnehmen eines Fotos schlägt die App automatisch einen Namen und Schlagworte vor.
+  Diese Erkennung läuft <strong>vollständig auf Ihrem Gerät</strong> (Google ML Kit,
+  On-Device). Ihre Fotos werden dabei <strong>nicht übertragen</strong> – weder an den
+  Anbieter noch an Dritte – und nicht gespeichert außer im app-privaten Verzeichnis. Die
+  Vorschläge können Sie jederzeit überschreiben.
 </p>
 <p>
-  Die App stellt im Betrieb <strong>keine Netzwerkverbindungen</strong> her. Sie funktioniert
-  vollständig ohne Internetverbindung. Die im System sichtbare Berechtigung für den
-  Internetzugriff ist für eine spätere, ausdrücklich vom Nutzer auszulösende Erweiterung
-  angelegt und wird in dieser Version nicht verwendet.
+  Um die erkannten Begriffe ins Deutsche zu übersetzen, lädt ML Kit einmalig ein Sprachpaket
+  über die Google Play-Dienste nach; ebenso kann das Modul zum Scannen der QR-Codes
+  nachgeladen werden. Übertragen wird dabei nur die Anfrage der Play-Dienste selbst – keine
+  Fotos und keine Inventardaten. Darüber hinaus stellt die App im Betrieb keine
+  Netzwerkverbindungen her und funktioniert auch ohne Internetverbindung.
 </p>
 
 <h2>6. Sicherungsdateien</h2>
