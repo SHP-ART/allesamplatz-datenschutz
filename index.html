@@ -51,7 +51,8 @@
 </p>
 <p>
   <strong>Ausnahme Pro-Version:</strong> Wer in der kostenpflichtigen Pro-Version den
-  Cloud-Sync einschaltet, überträgt dabei Inventardaten (ohne Fotos) an Google Firebase –
+  Cloud-Sync einschaltet, überträgt dabei Inventardaten und verkleinerte Vorschaubilder
+  an Google Firebase –
   freiwillig und jederzeit abschaltbar. Details in Punkt 6. Die kostenlose Version enthält
   diese Funktion nicht und stellt keine solchen Verbindungen her.
 </p>
@@ -124,7 +125,8 @@
 </p>
 <p>
   <strong>Cloud-Echtzeit-Sync:</strong> Beim Cloud-Sync werden Ihre Inventardaten
-  (Orte, Kisten, Gegenstände, Notizen – <strong>ohne Fotos</strong>) über den Dienst
+  (Orte, Kisten, Gegenstände, Notizen) sowie <strong>verkleinerte Vorschaubilder</strong>
+  Ihrer Gegenstandsfotos über den Dienst
   <strong>Google Firebase</strong> (Anbieter: Google Ireland Ltd., Gordon House, Barrow
   Street, Dublin 4, Irland) zwischen den Geräten Ihrer Gruppe abgeglichen. Dabei werden
   verarbeitet:
@@ -142,14 +144,26 @@
     <td>Google Firebase</td>
   </tr>
   <tr>
+    <td>Verkleinerte Vorschaubilder Ihrer Gegenstandsfotos (längste Kante rund 320 Pixel,
+      stark komprimiert; höchstens 500 Bilder je Gruppe)</td>
+    <td>Damit ein Gegenstand auf den anderen Geräten erkennbar ist</td>
+    <td>Cloud Firestore, Region Europa (europe-west3)</td>
+  </tr>
+  <tr>
     <td>Gruppen- und Gerätekennung (Zufallscodes), Schreib-Zähler</td>
     <td>Zuordnung zur Familiengruppe, technischer Betrieb</td>
     <td>Cloud Firestore, Region Europa (europe-west3)</td>
   </tr>
 </table>
 <p>
-  Fotos werden beim Cloud-Sync <strong>nicht</strong> übertragen; sie bleiben lokal bzw.
-  nutzen den Direkt-Sync. Lesen und schreiben kann die Gruppendaten nur, wer den
+  <strong>Ihre Fotos in voller Auflösung verlassen das Gerät über den Cloud-Sync
+  nicht.</strong> Übertragen wird nur eine stark verkleinerte Vorschau, damit auf dem
+  anderen Gerät erkennbar ist, worum es sich handelt; das Originalfoto bleibt lokal und
+  wird ausschließlich über den Direkt-Sync übertragen. Bitte bedenken Sie, dass auch eine
+  Vorschau den abgebildeten Inhalt erkennen lässt – fotografieren Sie für den Cloud-Sync
+  nichts, was Sie nicht bei Google gespeichert sehen möchten. Sind mehr als 500 Fotos
+  vorhanden, werden nur die zuletzt geänderten als Vorschau abgelegt.
+  Lesen und schreiben kann die Gruppendaten nur, wer den
   Einladungs-Code (QR) Ihrer Gruppe kennt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO
   (Bereitstellung der von Ihnen gewählten Funktion). Google verarbeitet die Daten als
   Auftragsverarbeiter auf Grundlage der Firebase-Datenverarbeitungsbedingungen. Sie können
@@ -178,7 +192,7 @@
   Es findet keine Weitergabe personenbezogener Daten an Dritte statt. Es werden keine Daten
   verkauft, keine Werbenetzwerke eingebunden und keine Profile gebildet. Ausnahme: der von
   Ihnen ausdrücklich aktivierte Cloud-Sync der Pro-Version (Punkt 6) überträgt Inventardaten
-  ohne Fotos an Google Firebase als Auftragsverarbeiter.
+  und verkleinerte Vorschaubilder an Google Firebase als Auftragsverarbeiter.
 </p>
 
 <h2>10. Speicherdauer und Löschung</h2>
