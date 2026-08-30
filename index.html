@@ -23,7 +23,7 @@
 <body>
 
 <h1>Datenschutzerklärung</h1>
-<p class="meta">Android-App „AllesAmPlatz“ · Stand: 27. August 2026</p>
+<p class="meta">Android-App „AllesAmPlatz“ · Stand: 30. August 2026</p>
 
 <h2>1. Verantwortlicher</h2>
 <p>
@@ -48,6 +48,12 @@
   Fotos – werden ausschließlich lokal im privaten Speicherbereich der App auf Ihrem Gerät
   abgelegt. Der Anbieter hat zu keinem Zeitpunkt Zugriff darauf und erhebt keine
   personenbezogenen Daten.
+</p>
+<p>
+  <strong>Ausnahme Pro-Version:</strong> Wer in der kostenpflichtigen Pro-Version den
+  Cloud-Sync einschaltet, überträgt dabei Inventardaten (ohne Fotos) an Google Firebase –
+  freiwillig und jederzeit abschaltbar. Details in Punkt 6. Die kostenlose Version enthält
+  diese Funktion nicht und stellt keine solchen Verbindungen her.
 </p>
 
 <h2>3. Welche Daten die App auf Ihrem Gerät speichert</h2>
@@ -83,8 +89,10 @@
 <p>
   <strong>Internet</strong> – für das Führen Ihres Inventars nicht erforderlich. Die
   Berechtigung nutzen die Google Play-Dienste, um die unter Punkt 5 genannten Erkennungs- und
-  Sprachmodule nachzuladen. Es findet keine Kommunikation im Hintergrund statt; Fotos und
-  Inventardaten werden dabei nicht übertragen.
+  Sprachmodule nachzuladen. In der kostenlosen Version findet darüber hinaus keine
+  Kommunikation im Hintergrund statt; Fotos und Inventardaten werden dabei nicht übertragen.
+  In der Pro-Version nutzt zusätzlich der von Ihnen aktivierte Cloud-Sync die
+  Internetverbindung (siehe Punkt 6).
 </p>
 
 <h2>5. Bilderkennung auf dem Gerät</h2>
@@ -103,7 +111,53 @@
   Netzwerkverbindungen her und funktioniert auch ohne Internetverbindung.
 </p>
 
-<h2>6. Sicherungsdateien</h2>
+<h2>6. Geräte-Synchronisierung (nur Pro-Version)</h2>
+<p>
+  Die kostenpflichtige Pro-Version bietet zwei optionale Möglichkeiten, Ihr Inventar
+  zwischen Ihren Geräten abzugleichen. Beide werden nur auf Ihren ausdrücklichen
+  Wunsch hin aktiv (Einladungs-Code scannen bzw. Gruppe erstellen):
+</p>
+<p>
+  <strong>Direkt-Sync (Gerät zu Gerät):</strong> Der Abgleich erfolgt lokal über
+  Bluetooth/WLAN-Direktverbindung (Google Nearby Connections). Die Daten – einschließlich
+  Fotos – wandern direkt zwischen Ihren Geräten, ohne einen Server zu berühren.
+</p>
+<p>
+  <strong>Cloud-Echtzeit-Sync:</strong> Beim Cloud-Sync werden Ihre Inventardaten
+  (Orte, Kisten, Gegenstände, Notizen – <strong>ohne Fotos</strong>) über den Dienst
+  <strong>Google Firebase</strong> (Anbieter: Google Ireland Ltd., Gordon House, Barrow
+  Street, Dublin 4, Irland) zwischen den Geräten Ihrer Gruppe abgeglichen. Dabei werden
+  verarbeitet:
+</p>
+<table>
+  <tr><th>Daten</th><th>Zweck</th><th>Speicherort</th></tr>
+  <tr>
+    <td>Inventarinhalte als Text (Orte, Kisten, Gegenstände, Notizen)</td>
+    <td>Abgleich zwischen Ihren Geräten</td>
+    <td>Cloud Firestore, Region Europa (europe-west3)</td>
+  </tr>
+  <tr>
+    <td>Anonyme Anmeldekennung (Firebase Authentication, ohne Name/E-Mail)</td>
+    <td>Zugangsschutz und Missbrauchsbegrenzung (Tageslimit je Installation)</td>
+    <td>Google Firebase</td>
+  </tr>
+  <tr>
+    <td>Gruppen- und Gerätekennung (Zufallscodes), Schreib-Zähler</td>
+    <td>Zuordnung zur Familiengruppe, technischer Betrieb</td>
+    <td>Cloud Firestore, Region Europa (europe-west3)</td>
+  </tr>
+</table>
+<p>
+  Fotos werden beim Cloud-Sync <strong>nicht</strong> übertragen; sie bleiben lokal bzw.
+  nutzen den Direkt-Sync. Lesen und schreiben kann die Gruppendaten nur, wer den
+  Einladungs-Code (QR) Ihrer Gruppe kennt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO
+  (Bereitstellung der von Ihnen gewählten Funktion). Google verarbeitet die Daten als
+  Auftragsverarbeiter auf Grundlage der Firebase-Datenverarbeitungsbedingungen. Sie können
+  die Gruppe in der App jederzeit verlassen; die in der Cloud gespeicherte Kopie lösche ich
+  auf Ihre Anfrage per E-Mail (siehe Punkt 14).
+</p>
+
+<h2>7. Sicherungsdateien</h2>
 <p>
   Die Sicherungsfunktion erzeugt eine ZIP-Datei mit Ihrer Datenbank und Ihren Fotos. Sie wählen
   den Speicherort selbst. Legen Sie die Datei in einen Cloud-Ordner, gilt für die dortige
@@ -111,7 +165,7 @@
   verschlüsselt – bewahren Sie sie entsprechend sorgfältig auf.
 </p>
 
-<h2>7. Google Play</h2>
+<h2>8. Google Play</h2>
 <p>
   Beim Herunterladen und Aktualisieren der App über Google Play verarbeitet Google Daten als
   eigenständig Verantwortlicher (z. B. Konto, Gerät, Installationsstatus). Darauf hat der
@@ -119,13 +173,15 @@
   <a href="https://policies.google.com/privacy">Datenschutzerklärung von Google</a>.
 </p>
 
-<h2>8. Weitergabe an Dritte</h2>
+<h2>9. Weitergabe an Dritte</h2>
 <p>
   Es findet keine Weitergabe personenbezogener Daten an Dritte statt. Es werden keine Daten
-  verkauft, keine Werbenetzwerke eingebunden und keine Profile gebildet.
+  verkauft, keine Werbenetzwerke eingebunden und keine Profile gebildet. Ausnahme: der von
+  Ihnen ausdrücklich aktivierte Cloud-Sync der Pro-Version (Punkt 6) überträgt Inventardaten
+  ohne Fotos an Google Firebase als Auftragsverarbeiter.
 </p>
 
-<h2>9. Speicherdauer und Löschung</h2>
+<h2>10. Speicherdauer und Löschung</h2>
 <p>
   Alle Daten verbleiben so lange auf Ihrem Gerät, wie Sie es wünschen. Sie können einzelne
   Einträge in der App löschen. Die Deinstallation der App entfernt sämtliche von der App
@@ -133,7 +189,7 @@
   Sie gesondert löschen, da sie außerhalb der App liegen.
 </p>
 
-<h2>10. Ihre Rechte</h2>
+<h2>11. Ihre Rechte</h2>
 <p>
   Ihnen stehen nach der DSGVO die Rechte auf Auskunft (Art. 15), Berichtigung (Art. 16),
   Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20)
@@ -143,19 +199,18 @@
   ausschließlich in Ihrer eigenen Verfügungsgewalt auf Ihrem Gerät.
 </p>
 
-<h2>11. Kinder</h2>
+<h2>12. Kinder</h2>
 <p>
   Die App richtet sich nicht an Kinder und erhebt wissentlich keine Daten von Kindern.
 </p>
 
-<h2>12. Änderungen dieser Erklärung</h2>
+<h2>13. Änderungen dieser Erklärung</h2>
 <p>
-  Diese Erklärung wird angepasst, wenn sich die App ändert – etwa wenn künftig eine
-  Synchronisierung über Ihren eigenen Cloud-Speicher hinzukommt. Maßgeblich ist die jeweils an
+  Diese Erklärung wird angepasst, wenn sich die App ändert. Maßgeblich ist die jeweils an
   dieser Adresse veröffentlichte Fassung mit dem oben genannten Stand.
 </p>
 
-<h2>13. Kontakt</h2>
+<h2>14. Kontakt</h2>
 <p>
   Fragen zum Datenschutz: <a href="mailto:shp-art@gmx.net">shp-art@gmx.net</a>
 </p>
