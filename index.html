@@ -23,7 +23,7 @@
 <body>
 
 <h1>Datenschutzerklärung</h1>
-<p class="meta">Android-App „AllesAmPlatz“ · Stand: 7. September 2026</p>
+<p class="meta">Android-App „AllesAmPlatz“ · Stand: 27. September 2026</p>
 
 <h2>1. Verantwortlicher</h2>
 <p>
@@ -155,7 +155,21 @@
     <td>Zuordnung zur Familiengruppe, technischer Betrieb</td>
     <td>Cloud Firestore, Region Europa (europe-west3)</td>
   </tr>
+  <tr>
+    <td>Prüfung der App-Echtheit (Firebase App Check mit der Google Play Integrity API:
+      ob die App unverändert aus Google Play stammt und auf einem echten Gerät läuft)</td>
+    <td>Schutz der Gruppendaten vor Zugriffen durch fremde Programme</td>
+    <td>Google Play / Google Firebase</td>
+  </tr>
 </table>
+<p>
+  <strong>Ende-zu-Ende-Verschlüsselung:</strong> Inventardaten und Vorschaubilder werden
+  bereits auf Ihrem Gerät mit AES-256 verschlüsselt, bevor sie hochgeladen werden. Der
+  Schlüssel wird aus dem Einladungs-Code (QR) Ihrer Gruppe abgeleitet und verlässt Ihre
+  Geräte nie. Google speichert und überträgt daher nur verschlüsselte Daten und kann – ebenso
+  wie ich als Entwickler – deren Inhalt nicht lesen. (Seit Version 1.5.0; Gruppendaten
+  älterer Versionen werden beim nächsten Abgleich verschlüsselt neu geschrieben.)
+</p>
 <p>
   <strong>Ihre Fotos in voller Auflösung verlassen das Gerät über den Cloud-Sync
   nicht.</strong> Übertragen wird nur eine stark verkleinerte Vorschau, damit auf dem
@@ -163,7 +177,8 @@
   wird ausschließlich über den Direkt-Sync übertragen. Bitte bedenken Sie, dass auch eine
   Vorschau den abgebildeten Inhalt erkennen lässt – fotografieren Sie für den Cloud-Sync
   nichts, was Sie nicht bei Google gespeichert sehen möchten. Sind mehr als 500 Fotos
-  vorhanden, werden nur die zuletzt geänderten als Vorschau abgelegt.
+  vorhanden, werden nur die zuletzt geänderten als Vorschau abgelegt. Dank der
+  Verschlüsselung sieht Google auch die Vorschaubilder nur verschlüsselt.
   Lesen und schreiben kann die Gruppendaten nur, wer den
   Einladungs-Code (QR) Ihrer Gruppe kennt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO
   (Bereitstellung der von Ihnen gewählten Funktion). Google verarbeitet die Daten als
